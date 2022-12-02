@@ -2497,24 +2497,18 @@ B Z
 C X
 C Y
 A Z
-A Z`.split('\n');
+A Z`.split("\n");
 
 const map = {
-  'A X': 4,
-  'A Y': 8,
-  'A Z': 3,
-  'B X': 1,
-  'B Y': 5,
-  'B Z': 9,
-  'C X': 7,
-  'C Y': 2,
-  'C Z': 6
+  "A X": 4,
+  "A Y": 8,
+  "A Z": 3,
+  "B X": 1,
+  "B Y": 5,
+  "B Z": 9,
+  "C X": 7,
+  "C Y": 2,
+  "C Z": 6,
 };
 
-let sum = 0;
-
-for (const round of input) {
-  sum += map[round];
-}
-
-console.log(sum);
+console.log(input.reduce((prev, curr) => prev + map[curr], 0));

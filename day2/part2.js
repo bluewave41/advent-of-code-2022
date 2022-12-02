@@ -2511,10 +2511,4 @@ const map = {
   "C Z": 7,
 };
 
-let sum = 0;
-
-for (const round of input) {
-  sum += map[round];
-}
-
-console.log(sum);
+console.log(input.reduce((prev, curr) => prev + map[curr], 0));
